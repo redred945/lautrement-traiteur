@@ -19,6 +19,7 @@
       var open = burger.classList.toggle('is-open');
       mobilePanel.classList.toggle('is-open', open);
       burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
       document.body.style.overflow = open ? 'hidden' : '';
     };
     burger.addEventListener('click', toggle);
@@ -26,6 +27,8 @@
       a.addEventListener('click', function () {
         burger.classList.remove('is-open');
         mobilePanel.classList.remove('is-open');
+        burger.setAttribute('aria-expanded', 'false');
+        burger.setAttribute('aria-label', 'Ouvrir le menu');
         document.body.style.overflow = '';
       });
     });
