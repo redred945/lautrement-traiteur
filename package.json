@@ -1,0 +1,12 @@
+{
+  "name": "lautrement-traiteur",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "images": "node tools/process-images.js",
+    "fonts": "node tools/build-fonts.js"
+  },
+  "dependencies": {
+    "sharp": "^0.35.4"
+  }
+}
